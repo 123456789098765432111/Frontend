@@ -5,6 +5,7 @@ import ButtonLink from "@/components/ButtonLink";
 import CartIcon from "@/components/icons/CartIcon";
 import {useContext} from "react";
 import {CartContext} from "@/components/CartContext";
+import Carusel from "./Carusel";
 
 const Bg = styled.div`
   background-color: #222;
@@ -62,28 +63,8 @@ export default function Featured({product}) {
     addProduct(product._id);
   }
   return (
-    <Bg>
-      <Center>
-        <ColumnsWrapper>
-          <Column>
-            <div>
-              <Title>{product.title}</Title>
-              <Desc>{product.description}</Desc>
-              <ButtonsWrapper>
-                <ButtonLink href={'/product/'+product._id} outline={1} white={1}>Read more</ButtonLink>
-                <Button white onClick={addFeaturedToCart}>
-                  <CartIcon />
-                  Add to cart
-                </Button>
-              </ButtonsWrapper>
-            </div>
-          </Column>
-          <Column>
-            <img src="https://dawid-next-ecommerce.s3.amazonaws.com/1679151719649.png" alt=""/>
-          </Column>
-        </ColumnsWrapper>
-      </Center>
-
-    </Bg>
-  );
+    <>
+      <Carusel/>
+    </>
+    );
 }
