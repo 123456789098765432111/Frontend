@@ -18,7 +18,7 @@ const ApiCrud2 = () => {
     <>
    {Api1?.data?.map((item,index)=>
 
-    <div style={{width:"400px",height:"300px",marginBottom:"85px"}}>
+    <div style={{width:"400px",height:"300px",marginBottom:"85px"}} key={item._id}>
     <Link
       href={`/Image_Pages/${item._id}`}
       className='h-96 flex flex-col p-6 rounded-lg group hover:scale-105 transition-transform ease-out duration-200 border'
