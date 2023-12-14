@@ -3,6 +3,8 @@
 import Header from '@/components/Header';
 import { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
+import Image from 'next/image';
+
 export default function Videos() {
     const [videos, setVideos] = useState([]);
   
@@ -32,7 +34,7 @@ export default function Videos() {
               <li key={video._id}>
               <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
-                      <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+                      <Image class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
                   </a>
                   <div class="p-5">
                       <ReactPlayer
