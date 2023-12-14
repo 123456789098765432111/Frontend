@@ -4,6 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import axios from 'axios';
 import Link from 'next/link';
+import Image from 'next/image';
 const ApiCrud = () => {
   const [categories,setCategories] = useState([]);
   const [categories2,setCategories2] = useState([]);
@@ -44,7 +45,7 @@ const ApiCrud = () => {
          <div key={item._id}>
            <Link href={`/category1/${item._id}`} >
         <>
-        <img src={item.images} style={{width:"500px",height:"500px"}} />
+        <Image src={item.images} style={{width:"500px",height:"500px"}} />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -64,7 +65,7 @@ const ApiCrud = () => {
       <Carousel.Item>
        <div key={item._id}>
          <>
-        <img src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
+        <Image src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -83,7 +84,7 @@ const ApiCrud = () => {
       <Carousel.Item>
       <div key={item._id}>
         <>
-        <img src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
+        <Image src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
