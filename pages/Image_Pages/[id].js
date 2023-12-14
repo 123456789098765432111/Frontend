@@ -1,6 +1,7 @@
 import { ApiService2 } from '@/components/Apiproduct'
 import Header from '@/components/Header'
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 
 const Image_Pages = () => {
     const [Api2,setData2] = useState([])
@@ -19,7 +20,7 @@ const Image_Pages = () => {
         <div class="flex min-h-screen items-center justify-center">
                 <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                     <div class="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
                         alt="image"
                         class="h-full w-full object-cover"
