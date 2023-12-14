@@ -41,7 +41,8 @@ const ApiCrud = () => {
        {
          categories.map((item,index)=>
         <Carousel.Item>
-          <Link href={`/category1/${item._id}`}>
+         <div key={item._id}>
+           <Link href={`/category1/${item._id}`} >
         <>
         <img src={item.images} style={{width:"500px",height:"500px"}} />
         <Carousel.Caption>
@@ -49,7 +50,8 @@ const ApiCrud = () => {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
         </>
-        </Link>
+        </Link>              
+          </div>
       </Carousel.Item>
         )
        }
@@ -60,13 +62,15 @@ const ApiCrud = () => {
        {
          categories2.map((item,index)=>
       <Carousel.Item>
-        <>
+       <div key={item._id}>
+         <>
         <img src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
-        </>
+        </>                 
+        </div>
       </Carousel.Item>
         )
        }
@@ -77,6 +81,7 @@ const ApiCrud = () => {
        {
          categories3.map((item,index)=>
       <Carousel.Item>
+      <div key={item._id}>
         <>
         <img src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
@@ -84,6 +89,7 @@ const ApiCrud = () => {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
         </>
+      </div>
       </Carousel.Item>
         )
        }
