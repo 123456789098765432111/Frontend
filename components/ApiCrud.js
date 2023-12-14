@@ -41,8 +41,8 @@ const ApiCrud = () => {
        <Carousel>
        {
          categories.map((item,index)=>
-        <Carousel.Item>
-         <div key={item._id}>
+        <Carousel.Item key={item._id}>
+         <div >
            <Link href={`/category1/${item._id}`} >
         <>
         <Image src={item.images} style={{width:"500px",height:"500px"}} />
@@ -62,8 +62,8 @@ const ApiCrud = () => {
        <Carousel>
        {
          categories2.map((item,index)=>
-      <Carousel.Item>
-       <div key={item._id}>
+      <Carousel.Item key={item._id}>
+       <div >
          <>
         <Image src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
@@ -81,8 +81,8 @@ const ApiCrud = () => {
        <Carousel>
        {
          categories3.map((item,index)=>
-      <Carousel.Item>
-      <div key={item._id}>
+      <Carousel.Item key={item._id}>
+      <div>
         <>
         <Image src={item.images} style={{width:"500px",margin:"0 auto",height:"500px"}} />
         <Carousel.Caption>
